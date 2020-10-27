@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes raíces</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--La hoja de estilo siempre va al final-->
+</head>
+
+<body>
+
+    <header class="site-header">
+        <!--puedes poner dos clases juntas, lo importante es que estén separadas por espacio(site header inicio)-->
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <!--Esto convierte a la imagen en un enlace-->
+                    <img src="img/logo.svg" alt="Logotipo de bienes raíces">
+                    <!-- src indica donde está la imagen, alt es el nombre de la imagen(se verá en caso que la imagen no cargue) -->
+                </a>
+
+                <nav class="navegacion">
+                    <!--Nav es para la navegación del sitio-->
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+
+        </div>
+        <!--contenedor-->
+    </header>
+
+    <h1 class="fw-300 centrar-texto">Contacto</h1>
+    <img src="img/destacada3.jpg" alt="Imagen Contacto">
+
+    <main class="contenedor seccion contenido-centrado">
+        <h2 class="fw-300 centrar-texto">Llena el formulario de Contacto</h2>
+
+        <form class="contacto" action="">
+            <!--formulario-->
+            <fieldset> <!--agrupa campos que estén relacionados, ejem, parte formulario 1 con parte formulario 2, 3 y 4 y genera la linea de división de grupos-->
+                <legend>Información Personal</legend><!--etiqueta para indicar a usuario de que trata esta parte del formulario-->
+
+                <label for="nombre">Nombre:</label><!--esta etiqueta identifica que el input de abajo pertenece a nombre, por la relación for-id (que es lo mismo, nombre)-->
+                <input type="text" id="nombre" placeholder="Tu Nombre"><!--este es un campo de texto, el usuario sólo podrá poner texto aquí. PLACEHOLDER es la palabra sombreada "Tu Nombre" dentro de la caja del formulario-->
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Tu Correo electrónico" required><!--type email es para casillas que reciban emails como información, valida que sea un email por el formato. REQUIRED exige que se complete este campo, si no se completa no deja enviar el formulario-->
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" placeholder="Tu Teléfono" required><!--type tel es para ingresar info de telefonos-->
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje"></textarea><!-- cols y rows ya no se usa ya que se da forma en CSS. cols="30" rows="10" cols=ancho rows=alto-->
+            </fieldset>
+
+            <fieldset>
+                <legend>Información sobre Propiedad</legend>
+
+                <label for="opciones">Vende o Compra</label>
+                <select id="opciones"><!--select es para crear opciones en un mini acordeón-->
+                    <option value="" disabled selected>--Seleccione--</option><!--disabled es para que no se pueda seleccionar la opcion "seleccione". selected es para que aparezca como primera opcion y combina con disabled, ambas hacen qeu aparezca la opcion por dejfecto pero al momento de abrir no se pueda usar.-->
+                    <option value="">Compra</option>
+                    <option value="">Vende</option>
+                </select>
+
+                <label for="presupuesto">Presupuesto:</label>
+                <input type="number" min="0" max="1000000" step="5"><!--este input recibe números. min es el minimo que aguanta, max el maximo, step es dar saltos, de 5 en 5 en este caso(5-10-15, etc)-->
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacto</legend>
+
+                <p>Como desea ser Contactado:</p>
+                <div class="forma-contacto">
+                    <label for="telefono">Teléfono</label>
+                    <input type="radio" name="contacto" value="telefono" id="tel"><!--radio ofrece selector de punto. En los selectores de la misma pregunta se deben asociar con el nombre, en este caso"name=contacto", si no se hace, se podrán marcar ambos radios al mismo tiempo y asi no sirve-->
+
+                    <label for="correo">E-mail</label>
+                    <input type="radio" name="contacto" value="correo" id="correo"> 
+                </div>
+
+                <p>Si eligió teléfono, elija fecha y hora</p>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha"><!--para escribir fecha-->
+
+                <label for="hora">Hora:</label><!--este permite seleccionar hora-->
+                <input type="time" id="hora" min="9:00" max="18:00">
+            </fieldset>
+
+            <input type="submit" value="Enviar" class="boton boton-verde">
+            <!--boton para enviar el formulario-->
+        </form>
+    </main>
+
+
+
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">Todos los derechos reservados - 2020 &copy; </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

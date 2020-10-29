@@ -23,7 +23,13 @@
                     <!-- src indica donde está la imagen, alt es el nombre de la imagen(se verá en caso que la imagen no cargue) -->
                 </a>
 
-                <nav class="navegacion">
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="img/barras.svg" alt="Icono Menu">
+                    </a>
+                </div>
+
+                <nav id="navegacion" class="navegacion">
                     <!--Nav es para la navegación del sitio-->
                     <a href="nosotros.html">Nosotros</a>
                     <a href="anuncios.html">Anuncios</a>
@@ -44,20 +50,27 @@
 
         <form class="contacto" action="">
             <!--formulario-->
-            <fieldset> <!--agrupa campos que estén relacionados, ejem, parte formulario 1 con parte formulario 2, 3 y 4 y genera la linea de división de grupos-->
-                <legend>Información Personal</legend><!--etiqueta para indicar a usuario de que trata esta parte del formulario-->
+            <fieldset>
+                <!--agrupa campos que estén relacionados, ejem, parte formulario 1 con parte formulario 2, 3 y 4 y genera la linea de división de grupos-->
+                <legend>Información Personal</legend>
+                <!--etiqueta para indicar a usuario de que trata esta parte del formulario-->
 
-                <label for="nombre">Nombre:</label><!--esta etiqueta identifica que el input de abajo pertenece a nombre, por la relación for-id (que es lo mismo, nombre)-->
-                <input type="text" id="nombre" placeholder="Tu Nombre"><!--este es un campo de texto, el usuario sólo podrá poner texto aquí. PLACEHOLDER es la palabra sombreada "Tu Nombre" dentro de la caja del formulario-->
+                <label for="nombre">Nombre:</label>
+                <!--esta etiqueta identifica que el input de abajo pertenece a nombre, por la relación for-id (que es lo mismo, nombre)-->
+                <input type="text" id="nombre" placeholder="Tu Nombre">
+                <!--este es un campo de texto, el usuario sólo podrá poner texto aquí. PLACEHOLDER es la palabra sombreada "Tu Nombre" dentro de la caja del formulario-->
 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" placeholder="Tu Correo electrónico" required><!--type email es para casillas que reciban emails como información, valida que sea un email por el formato. REQUIRED exige que se complete este campo, si no se completa no deja enviar el formulario-->
+                <input type="email" id="email" placeholder="Tu Correo electrónico" required>
+                <!--type email es para casillas que reciban emails como información, valida que sea un email por el formato. REQUIRED exige que se complete este campo, si no se completa no deja enviar el formulario-->
 
                 <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" placeholder="Tu Teléfono" required><!--type tel es para ingresar info de telefonos-->
+                <input type="tel" id="telefono" placeholder="Tu Teléfono" required>
+                <!--type tel es para ingresar info de telefonos-->
 
                 <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje"></textarea><!-- cols y rows ya no se usa ya que se da forma en CSS. cols="30" rows="10" cols=ancho rows=alto-->
+                <textarea id="mensaje"></textarea>
+                <!-- cols y rows ya no se usa ya que se da forma en CSS. cols="30" rows="10" cols=ancho rows=alto-->
             </fieldset>
 
             <fieldset>
@@ -71,7 +84,8 @@
                 </select>
 
                 <label for="presupuesto">Presupuesto:</label>
-                <input type="number" min="0" max="1000000" step="5"><!--este input recibe números. min es el minimo que aguanta, max el maximo, step es dar saltos, de 5 en 5 en este caso(5-10-15, etc)-->
+                <input type="number" min="0" max="1000000" step="5">
+                <!--este input recibe números. min es el minimo que aguanta, max el maximo, step es dar saltos, de 5 en 5 en este caso(5-10-15, etc)-->
             </fieldset>
 
             <fieldset>
@@ -80,17 +94,20 @@
                 <p>Como desea ser Contactado:</p>
                 <div class="forma-contacto">
                     <label for="telefono">Teléfono</label>
-                    <input type="radio" name="contacto" value="telefono" id="tel"><!--radio ofrece selector de punto. En los selectores de la misma pregunta se deben asociar con el nombre, en este caso"name=contacto", si no se hace, se podrán marcar ambos radios al mismo tiempo y asi no sirve-->
+                    <input type="radio" name="contacto" value="telefono" id="tel">
+                    <!--radio ofrece selector de punto. En los selectores de la misma pregunta se deben asociar con el nombre, en este caso"name=contacto", si no se hace, se podrán marcar ambos radios al mismo tiempo y asi no sirve-->
 
                     <label for="correo">E-mail</label>
-                    <input type="radio" name="contacto" value="correo" id="correo"> 
+                    <input type="radio" name="contacto" value="correo" id="correo">
                 </div>
 
                 <p>Si eligió teléfono, elija fecha y hora</p>
                 <label for="fecha">Fecha:</label>
-                <input type="date" id="fecha"><!--para escribir fecha-->
+                <input type="date" id="fecha">
+                <!--para escribir fecha-->
 
-                <label for="hora">Hora:</label><!--este permite seleccionar hora-->
+                <label for="hora">Hora:</label>
+                <!--este permite seleccionar hora-->
                 <input type="time" id="hora" min="9:00" max="18:00">
             </fieldset>
 
